@@ -1,0 +1,247 @@
+[gd_scene load_steps=76 format=3 uid="uid://6pm3rfyrxsu3"]
+
+[ext_resource type="Script" uid="uid://dtxlwsvfnorhp" path="res://Scripts/CrashPlayer.gd" id="1_yjus5"]
+[ext_resource type="ArrayMesh" uid="uid://bu43gg1ucwshe" path="res://Assets/Idle/Frames/Idle00/Mesh.tres" id="2_dwq30"]
+[ext_resource type="ArrayMesh" uid="uid://c3c78h2rau33k" path="res://Assets/Flip/Frames/Flip00/Mesh.tres" id="3_uetve"]
+[ext_resource type="ArrayMesh" uid="uid://c884f1p7bhvx0" path="res://Assets/Flip/Frames/Flip01/Mesh.tres" id="4_g0vkc"]
+[ext_resource type="ArrayMesh" uid="uid://cua43lvqsdw6k" path="res://Assets/Flip/Frames/Flip02/Mesh.tres" id="5_v5ji8"]
+[ext_resource type="ArrayMesh" uid="uid://ddr18wffyhnfn" path="res://Assets/Flip/Frames/Flip03/Mesh.tres" id="6_mquaq"]
+[ext_resource type="ArrayMesh" uid="uid://c31nevbcmrnc8" path="res://Assets/Flip/Frames/Flip04/Mesh.tres" id="7_8u0xg"]
+[ext_resource type="ArrayMesh" uid="uid://bwbmgsd68r75u" path="res://Assets/Flip/Frames/Flip05/Mesh.tres" id="8_ov7j0"]
+[ext_resource type="ArrayMesh" uid="uid://drv4mjgkv3h81" path="res://Assets/Flip/Frames/Flip06/Mesh.tres" id="9_h8nhg"]
+[ext_resource type="ArrayMesh" uid="uid://byvnlqf82p60a" path="res://Assets/Flip/Frames/Flip07/Mesh.tres" id="10_dtdf0"]
+[ext_resource type="ArrayMesh" uid="uid://0mrladv4qvgt" path="res://Assets/Flip/Frames/Flip08/Mesh.tres" id="11_a1qsm"]
+[ext_resource type="ArrayMesh" uid="uid://idko22iawx1b" path="res://Assets/Flip/Frames/Flip09/Mesh.tres" id="12_0mt55"]
+[ext_resource type="ArrayMesh" uid="uid://c0cs47ydxpxi0" path="res://Assets/Flip/Frames/Flip10/Mesh.tres" id="13_hpfv1"]
+[ext_resource type="ArrayMesh" uid="uid://b1sa3v2nkoxgw" path="res://Assets/Flip/Frames/Flip11/Mesh.tres" id="14_nt60j"]
+[ext_resource type="ArrayMesh" uid="uid://c8dfsq46qef4h" path="res://Assets/Flip/Frames/Flip12/Mesh.tres" id="15_vuurb"]
+[ext_resource type="ArrayMesh" uid="uid://dqowod04uv686" path="res://Assets/Flip/Frames/Flip13/Mesh.tres" id="16_3hw7v"]
+[ext_resource type="ArrayMesh" uid="uid://xv012ovejkon" path="res://Assets/Idle/Frames/Idle01/Mesh.tres" id="17_84nsc"]
+[ext_resource type="ArrayMesh" uid="uid://cmbxj6anh2xmm" path="res://Assets/Idle/Frames/Idle02/Mesh.tres" id="18_64yb1"]
+[ext_resource type="ArrayMesh" uid="uid://bhtqgu51sqgtr" path="res://Assets/Idle/Frames/Idle03/Mesh.tres" id="19_h3hjy"]
+[ext_resource type="ArrayMesh" uid="uid://y8g3wh25bhhi" path="res://Assets/Idle/Frames/Idle04/Mesh.tres" id="20_0cv7h"]
+[ext_resource type="ArrayMesh" uid="uid://3l7lrjmt1ugv" path="res://Assets/Idle/Frames/Idle05/Mesh.tres" id="21_jw3bj"]
+[ext_resource type="ArrayMesh" uid="uid://d1vwqxiqny2hp" path="res://Assets/Idle/Frames/Idle06/Mesh.tres" id="22_vstbp"]
+[ext_resource type="ArrayMesh" uid="uid://dk6k1y7spc4i5" path="res://Assets/Idle/Frames/Idle07/Mesh.tres" id="23_eumdr"]
+[ext_resource type="ArrayMesh" uid="uid://cy0260u5ue6nc" path="res://Assets/Idle/Frames/Idle08/Mesh.tres" id="24_vi5rx"]
+[ext_resource type="ArrayMesh" uid="uid://c2527bvbd4k5d" path="res://Assets/Idle/Frames/Idle09/Mesh.tres" id="25_qr0f6"]
+[ext_resource type="ArrayMesh" uid="uid://bkkhpfg6mm5l" path="res://Assets/Idle/Frames/Idle10/Mesh.tres" id="26_2bpjp"]
+[ext_resource type="ArrayMesh" uid="uid://b4r5qqv8enab5" path="res://Assets/Jump/Frames/Jump00/Mesh.tres" id="27_if25q"]
+[ext_resource type="ArrayMesh" uid="uid://bo7hxwkylh0ry" path="res://Assets/Jump/Frames/Jump01/Mesh.tres" id="28_02rwh"]
+[ext_resource type="ArrayMesh" uid="uid://dbfffxjavo5eh" path="res://Assets/Jump/Frames/Jump02/Mesh.tres" id="29_rfr0d"]
+[ext_resource type="ArrayMesh" uid="uid://b7c527gyhqrut" path="res://Assets/Jump/Frames/Jump03/Mesh.tres" id="30_8sn74"]
+[ext_resource type="ArrayMesh" uid="uid://c6sa6kca2ajc5" path="res://Assets/Jump/Frames/Jump04/Mesh.tres" id="31_gmehf"]
+[ext_resource type="ArrayMesh" uid="uid://d30tuaoas5cxt" path="res://Assets/Jump/Frames/Jump05/Mesh.tres" id="32_2waws"]
+[ext_resource type="ArrayMesh" uid="uid://dfarvdma08k2e" path="res://Assets/Jump/Frames/Jump06/Mesh.tres" id="33_jbu4s"]
+[ext_resource type="ArrayMesh" uid="uid://b6q7soykm1huq" path="res://Assets/Jump/Frames/Jump07/Mesh.tres" id="34_bn35p"]
+[ext_resource type="ArrayMesh" uid="uid://bdt1atlss25r7" path="res://Assets/Jump/Frames/Jump08/Mesh.tres" id="35_f7h47"]
+[ext_resource type="ArrayMesh" uid="uid://dq06n06bh8mx5" path="res://Assets/Jump/Frames/Jump09/Mesh.tres" id="36_xfalm"]
+[ext_resource type="ArrayMesh" uid="uid://c881dyxpeojyd" path="res://Assets/Land/Frames/Land00/Mesh.tres" id="37_7bj1v"]
+[ext_resource type="ArrayMesh" uid="uid://cimwxcioan60x" path="res://Assets/Land/Frames/Land01/Mesh.tres" id="38_1fkqs"]
+[ext_resource type="ArrayMesh" uid="uid://b8bkk1a4ew20x" path="res://Assets/Land/Frames/Land02/Mesh.tres" id="39_o1jhf"]
+[ext_resource type="ArrayMesh" uid="uid://kqn57t76hbl7" path="res://Assets/Land/Frames/Land03/Mesh.tres" id="40_f4ljl"]
+[ext_resource type="ArrayMesh" uid="uid://0i6mqxb5xq7t" path="res://Assets/Land/Frames/Land04/Mesh.tres" id="41_y524i"]
+[ext_resource type="ArrayMesh" uid="uid://rmkftfdpbt8o" path="res://Assets/Land/Frames/Land05/Mesh.tres" id="42_kg5lt"]
+[ext_resource type="ArrayMesh" uid="uid://djj30ig42885e" path="res://Assets/Land/Frames/Land06/Mesh.tres" id="43_1o7x7"]
+[ext_resource type="ArrayMesh" uid="uid://dlkdckxg5h0ff" path="res://Assets/Land/Frames/Land07/Mesh.tres" id="44_ibk2b"]
+[ext_resource type="ArrayMesh" uid="uid://472urgm7w07i" path="res://Assets/Land/Frames/Land08/Mesh.tres" id="45_peox7"]
+[ext_resource type="ArrayMesh" uid="uid://c6wdijdw7oev5" path="res://Assets/Land/Frames/Land09/Mesh.tres" id="46_ixvun"]
+[ext_resource type="ArrayMesh" uid="uid://cylb6ypewrlte" path="res://Assets/Land/Frames/Land10/Mesh.tres" id="47_o0ck4"]
+[ext_resource type="ArrayMesh" uid="uid://18851pqex2xu" path="res://Assets/Run/Frames/Run00/Mesh.tres" id="48_olhrf"]
+[ext_resource type="ArrayMesh" uid="uid://cgjc8p71tbmek" path="res://Assets/Run/Frames/Run01/Mesh.tres" id="49_gihe2"]
+[ext_resource type="ArrayMesh" uid="uid://dyd35lct1s6kf" path="res://Assets/Run/Frames/Run02/Mesh.tres" id="50_2e4om"]
+[ext_resource type="ArrayMesh" uid="uid://qnwv5523tm8h" path="res://Assets/Run/Frames/Run03/Mesh.tres" id="51_2ytko"]
+[ext_resource type="ArrayMesh" uid="uid://ds7t1i6ttfuh4" path="res://Assets/Run/Frames/Run04/Mesh.tres" id="52_tjef2"]
+[ext_resource type="ArrayMesh" uid="uid://b4sljko0b0plx" path="res://Assets/Run/Frames/Run05/Mesh.tres" id="53_yro5l"]
+[ext_resource type="ArrayMesh" uid="uid://b8fc2sdohyasj" path="res://Assets/Run/Frames/Run06/Mesh.tres" id="54_c7qil"]
+[ext_resource type="ArrayMesh" uid="uid://bme7d4l73iukr" path="res://Assets/Run/Frames/Run07/Mesh.tres" id="55_8n848"]
+[ext_resource type="ArrayMesh" uid="uid://cwljeti76w7gd" path="res://Assets/Run/Frames/Run08/Mesh.tres" id="56_tq3dg"]
+[ext_resource type="ArrayMesh" uid="uid://dckgu31lh15oo" path="res://Assets/Spin/Frames/Spin00/Mesh.tres" id="57_wmny2"]
+[ext_resource type="ArrayMesh" uid="uid://bxs7jfpmwrpmq" path="res://Assets/Spin/Frames/Spin01/Mesh.tres" id="58_8uk3m"]
+[ext_resource type="ArrayMesh" uid="uid://6djkfjf30ces" path="res://Assets/Spin/Frames/Spin02/Mesh.tres" id="59_tcb2d"]
+[ext_resource type="ArrayMesh" uid="uid://datx02g4iwjq0" path="res://Assets/Spin/Frames/Spin03/Mesh.tres" id="60_n7kp4"]
+[ext_resource type="ArrayMesh" uid="uid://bcfl8ikjq1v1x" path="res://Assets/Spin/Frames/Spin04/Mesh.tres" id="61_1j7xk"]
+[ext_resource type="ArrayMesh" uid="uid://bd5nui5fgdm7j" path="res://Assets/Spin/Frames/Spin05/Mesh.tres" id="62_4b0ab"]
+[ext_resource type="ArrayMesh" uid="uid://6d1ukn0pi4ls" path="res://Assets/Spin/Frames/Spin06/Mesh.tres" id="63_0yiqn"]
+[ext_resource type="ArrayMesh" uid="uid://d4lqc28vdm87f" path="res://Assets/Spin/Frames/Spin07/Mesh.tres" id="64_pe2q5"]
+[ext_resource type="ArrayMesh" uid="uid://bbe22us6n2oyd" path="res://Assets/Spin/Frames/Spin08/Mesh.tres" id="65_vu1sp"]
+[ext_resource type="ArrayMesh" uid="uid://mjplqvod4q6" path="res://Assets/Spin/Frames/Spin09/Mesh.tres" id="66_7p07a"]
+
+[sub_resource type="Animation" id="Animation_rf015"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_dwq30")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SpringArm3D:collision_mask")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_yk1og"]
+resource_name = "flip"
+length = 0.4334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.4, 0.43333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_uetve"), ExtResource("4_g0vkc"), ExtResource("5_v5ji8"), ExtResource("6_mquaq"), ExtResource("7_8u0xg"), ExtResource("8_ov7j0"), ExtResource("9_h8nhg"), ExtResource("10_dtdf0"), ExtResource("11_a1qsm"), ExtResource("12_0mt55"), ExtResource("13_hpfv1"), ExtResource("14_nt60j"), ExtResource("15_vuurb"), ExtResource("16_3hw7v")]
+}
+
+[sub_resource type="Animation" id="Animation_oypxe"]
+resource_name = "idle"
+length = 0.6667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_dwq30"), ExtResource("17_84nsc"), ExtResource("18_64yb1"), ExtResource("19_h3hjy"), ExtResource("20_0cv7h"), ExtResource("21_jw3bj"), ExtResource("22_vstbp"), ExtResource("23_eumdr"), ExtResource("24_vi5rx"), ExtResource("25_qr0f6"), ExtResource("26_2bpjp")]
+}
+
+[sub_resource type="Animation" id="Animation_1ft18"]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("27_if25q"), ExtResource("28_02rwh"), ExtResource("29_rfr0d"), ExtResource("30_8sn74"), ExtResource("31_gmehf"), ExtResource("32_2waws"), ExtResource("33_jbu4s"), ExtResource("34_bn35p"), ExtResource("35_f7h47"), ExtResource("36_xfalm")]
+}
+
+[sub_resource type="Animation" id="Animation_a72p3"]
+resource_name = "land"
+length = 0.6667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("37_7bj1v"), ExtResource("38_1fkqs"), ExtResource("39_o1jhf"), ExtResource("40_f4ljl"), ExtResource("41_y524i"), ExtResource("42_kg5lt"), ExtResource("43_1o7x7"), ExtResource("44_ibk2b"), ExtResource("45_peox7"), ExtResource("46_ixvun"), ExtResource("47_o0ck4")]
+}
+
+[sub_resource type="Animation" id="Animation_3owiq"]
+resource_name = "run"
+length = 0.5334
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("48_olhrf"), ExtResource("49_gihe2"), ExtResource("50_2e4om"), ExtResource("51_2ytko"), ExtResource("52_tjef2"), ExtResource("53_yro5l"), ExtResource("54_c7qil"), ExtResource("55_8n848"), ExtResource("56_tq3dg")]
+}
+
+[sub_resource type="Animation" id="Animation_1sokj"]
+resource_name = "spin"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("57_wmny2"), ExtResource("58_8uk3m"), ExtResource("59_tcb2d"), ExtResource("60_n7kp4"), ExtResource("61_1j7xk"), ExtResource("62_4b0ab"), ExtResource("63_0yiqn"), ExtResource("64_pe2q5"), ExtResource("65_vu1sp"), ExtResource("66_7p07a")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SpringArm3D:collision_mask")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxer5"]
+_data = {
+&"RESET": SubResource("Animation_rf015"),
+&"flip": SubResource("Animation_yk1og"),
+&"idle": SubResource("Animation_oypxe"),
+&"jump": SubResource("Animation_1ft18"),
+&"land": SubResource("Animation_a72p3"),
+&"run": SubResource("Animation_3owiq"),
+&"spin": SubResource("Animation_1sokj")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyfn4"]
+radius = 0.21386719
+height = 0.94506836
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_yjus5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+mesh = ExtResource("2_dwq30")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_kxer5")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4720459, 0)
+shape = SubResource("CapsuleShape3D_oyfn4")
+debug_color = Color(0, 0.58431375, 0.7921569, 0.73333335)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+spring_length = 1.5
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(0.99335444, 0.054532237, -0.10135669, -0.010868438, 0.92114073, 0.38907796, 0.11458106, -0.38539073, 0.9156119, -0.06362145, 1.0946232, 0.9868278)
+current = true
+
+[connection signal="animation_finished" from="MeshInstance3D/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
