@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce4mff04luqsx"]
+
+[ext_resource type="Script" uid="uid://67mwoeg6s2en" path="res://scripts/ball_spawner.gd" id="1_vml06"]
+[ext_resource type="PackedScene" uid="uid://cvbqlu7g5euut" path="res://scenes/ball.tscn" id="2_qkrhk"]
+
+[node name="BallSpawner" type="Node3D"]
+script = ExtResource("1_vml06")
+ball = ExtResource("2_qkrhk")

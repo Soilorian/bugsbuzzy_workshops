@@ -1,0 +1,162 @@
+[gd_scene load_steps=12 format=3 uid="uid://cw8vnqo6kun75"]
+
+[ext_resource type="Material" uid="uid://b462t8y1telyb" path="res://materials/ground.tres" id="1_eiae1"]
+[ext_resource type="PackedScene" uid="uid://b8up81cisp0n7" path="res://scenes/corner.tscn" id="2_bqfr3"]
+[ext_resource type="PackedScene" uid="uid://cvbqlu7g5euut" path="res://scenes/ball.tscn" id="4_4qffq"]
+[ext_resource type="PackedScene" uid="uid://cmd5c7j1k1kwe" path="res://scenes/crash_bash_player.tscn" id="5_dl4fv"]
+[ext_resource type="PackedScene" uid="uid://ce4mff04luqsx" path="res://scenes/ball_spawner.tscn" id="5_q33wy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bqfr3"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_53yfq"]
+sky_material = SubResource("ProceduralSkyMaterial_bqfr3")
+
+[sub_resource type="Environment" id="Environment_4qffq"]
+background_mode = 2
+sky = SubResource("Sky_53yfq")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4qffq"]
+friction = 0.0
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_7dm0k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eiae1"]
+size = Vector3(50, 1, 50)
+
+[node name="Root" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 30.472416, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4qffq")
+
+[node name="Ground" type="StaticBody3D" parent="." groups=["gruond"]]
+physics_material_override = SubResource("PhysicsMaterial_4qffq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 50, 0, 0, 0)
+material_override = ExtResource("1_eiae1")
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_eiae1")
+
+[node name="Corner" parent="." instance=ExtResource("2_bqfr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1.0786657, -17)
+
+[node name="Corner2" parent="." instance=ExtResource("2_bqfr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1.0786657, -17)
+
+[node name="Corner3" parent="." instance=ExtResource("2_bqfr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1.0786657, 17)
+
+[node name="Corner4" parent="." instance=ExtResource("2_bqfr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1.0786657, 17)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.6984529, 0.7156561, 0, -0.7156561, 0.6984529, 0, 25.102837, 30.245293)
+
+[node name="Ball" parent="." instance=ExtResource("4_4qffq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.308952, 1.7427912, 2.7509842)
+angular_damp_mode = 1
+initial_velocity = Vector3(5, 0, 10)
+
+[node name="BallSpawner" parent="." instance=ExtResource("5_q33wy")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -16.970562, 3, -16.970562)
+
+[node name="BallSpawner2" parent="." instance=ExtResource("5_q33wy")]
+transform = Transform3D(-0.7071068, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071068, 16.970562, 3, 16.970562)
+
+[node name="BallSpawner3" parent="." instance=ExtResource("5_q33wy")]
+transform = Transform3D(-0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, -0.70710665, 16.97056, 3, -16.970562)
+
+[node name="BallSpawner4" parent="." instance=ExtResource("5_q33wy")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -16.97056, 3, 16.97057)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 113.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Label" type="Label" parent="Control/Control/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Kir"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Label2" type="Label" parent="Control/Control/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Kir"
+
+[node name="MarginContainer3" type="MarginContainer" parent="Control/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Label3" type="Label" parent="Control/Control/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Kir"
+
+[node name="MarginContainer4" type="MarginContainer" parent="Control/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Label4" type="Label" parent="Control/Control/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Kir"
+
+[node name="Player" parent="." node_paths=PackedStringArray("score_label") instance=ExtResource("5_dl4fv")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 2.2948477e-06, 0, -17.5)
+score_label = NodePath("../Control/Control/HBoxContainer/MarginContainer/Label")
+
+[node name="Player2" parent="." node_paths=PackedStringArray("score_label") instance=ExtResource("5_dl4fv")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 6.7752666e-07, 0, 17.5)
+score_label = NodePath("../Control/Control/HBoxContainer/MarginContainer2/Label2")
+
+[node name="Player3" parent="." node_paths=PackedStringArray("score_label") instance=ExtResource("5_dl4fv")]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, 17.5, 0, 3.907985e-14)
+score_label = NodePath("../Control/Control/HBoxContainer/MarginContainer3/Label3")
+
+[node name="Player4" parent="." node_paths=PackedStringArray("score_label") instance=ExtResource("5_dl4fv")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -17.5, 0, -3.0597969e-06)
+score_label = NodePath("../Control/Control/HBoxContainer/MarginContainer4/Label4")

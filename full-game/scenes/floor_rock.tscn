@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkld00vbwkpwv"]
+
+[ext_resource type="PackedScene" uid="uid://cwxslugfq6sqi" path="res://models/assests/floor_foundation_allsides.gltf" id="1_0088d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6r0u"]
+size = Vector3(2.222168, 0.63726807, 2.2304688)
+
+[node name="floorRock" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.9928832, 0, 0, 0, 0.74835396, 0, 0, 0, 0.9928832, 0.0039372444, 0.2427162, 0.00390625)
+shape = SubResource("BoxShape3D_p6r0u")
+
+[node name="floor_foundation_allsides2" parent="." instance=ExtResource("1_0088d")]
+transform = Transform3D(1, 0, 0, 0, 0.2652164, 0, 0, 0, 1, 0, 0, 0)

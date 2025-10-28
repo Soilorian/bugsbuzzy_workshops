@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvbqlu7g5euut"]
+
+[ext_resource type="Script" uid="uid://bcd7yesi1ureq" path="res://scripts/ball.gd" id="1_7s4qf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7s4qf"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_n1dj2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7s4qf"]
+
+[node name="Ball" type="RigidBody3D"]
+collision_mask = 31
+physics_material_override = SubResource("PhysicsMaterial_7s4qf")
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp_mode = 1
+script = ExtResource("1_7s4qf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.2937393, 0, 0, 0, 2.2937393, 0, 0, 0, 2.2937393, 0, 0, 0)
+mesh = SubResource("SphereMesh_n1dj2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.2937393, 0, 0, 0, 2.2937393, 0, 0, 0, 2.2937393, 0, 0, 0)
+shape = SubResource("SphereShape3D_7s4qf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

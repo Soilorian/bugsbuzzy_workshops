@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuuwg85y4fit6"]
+
+[ext_resource type="PackedScene" uid="uid://cwxslugfq6sqi" path="res://models/assests/floor_foundation_allsides.gltf" id="1_lmtcx"]
+[ext_resource type="Script" uid="uid://bqwa1fs6qh4ko" path="res://Scripts/moving_platform_second.gd" id="1_nk4cb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nk4cb"]
+size = Vector3(2.2659912, 0.6467285, 2.2939453)
+
+[node name="moving_platform_second" type="AnimatableBody3D"]
+script = ExtResource("1_nk4cb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004699707, 0.30725098, 0.009277344)
+shape = SubResource("BoxShape3D_nk4cb")
+
+[node name="floor_foundation_allsides2" parent="." instance=ExtResource("1_lmtcx")]
+transform = Transform3D(1, 0, 0, 0, 0.3243605, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]

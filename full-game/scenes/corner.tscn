@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8up81cisp0n7"]
+
+[ext_resource type="Material" uid="uid://b462t8y1telyb" path="res://materials/ground.tres" id="1_fb7yc"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_gxctt"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fb7yc"]
+height = 1.0009766
+
+[node name="Corner" type="StaticBody3D" groups=["reflect_ball"]]
+collision_layer = 2
+collision_mask = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.45, 0, 0, 0, 9.45, 0, 0, 0, 9.45, 0, 0, 0)
+material_override = ExtResource("1_fb7yc")
+mesh = SubResource("SphereMesh_gxctt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(9.45, 0, 0, 0, 9.45, 0, 0, 0, 9.45, 0, 0, 0)
+shape = SubResource("CylinderShape3D_fb7yc")

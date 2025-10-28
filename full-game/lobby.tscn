@@ -1,0 +1,150 @@
+[gd_scene load_steps=2 format=3 uid="uid://ufngxgs4dvmo"]
+
+[ext_resource type="Script" uid="uid://b4xkb0c3cqe4e" path="res://scripts/Lobby.gd" id="1_ll2xe"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ll2xe")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.3, 0.4, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 644.0
+
+[node name="LeftVBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="LeftPanel" type="ColorRect" parent="HBoxContainer/LeftVBoxContainer"]
+layout_mode = 2
+color = Color(0.3, 0.4, 0.5, 0.8)
+
+[node name="Multiplayer Lobby" type="Label" parent="HBoxContainer/LeftVBoxContainer"]
+modulate = Color(1, 1, 0.8, 1)
+layout_mode = 2
+text = "Lobby Control"
+horizontal_alignment = 1
+
+[node name="usernameHBox" type="HBoxContainer" parent="HBoxContainer/LeftVBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="username" type="Label" parent="HBoxContainer/LeftVBoxContainer/usernameHBox"]
+layout_mode = 2
+text = "Username: "
+
+[node name="username_input" type="LineEdit" parent="HBoxContainer/LeftVBoxContainer/usernameHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "username"
+expand_to_text_length = true
+
+[node name="IpHBox" type="HBoxContainer" parent="HBoxContainer/LeftVBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ip" type="Label" parent="HBoxContainer/LeftVBoxContainer/IpHBox"]
+layout_mode = 2
+text = "IP:"
+
+[node name="ip_input" type="LineEdit" parent="HBoxContainer/LeftVBoxContainer/IpHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ip"
+editable = false
+expand_to_text_length = true
+
+[node name="host_button" type="Button" parent="HBoxContainer/LeftVBoxContainer"]
+modulate = Color(0.8, 1, 0.8, 1)
+layout_mode = 2
+text = "Host Game"
+
+[node name="joinIpHBox" type="HBoxContainer" parent="HBoxContainer/LeftVBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="joinIp" type="Label" parent="HBoxContainer/LeftVBoxContainer/joinIpHBox"]
+layout_mode = 2
+text = "Join IP:"
+
+[node name="join_ip_input" type="LineEdit" parent="HBoxContainer/LeftVBoxContainer/joinIpHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "ip"
+expand_to_text_length = true
+
+[node name="join_button" type="Button" parent="HBoxContainer/LeftVBoxContainer"]
+modulate = Color(0.8, 0.8, 1, 1)
+layout_mode = 2
+text = "Join Selected"
+
+[node name="leave_button" type="Button" parent="HBoxContainer/LeftVBoxContainer"]
+modulate = Color(1, 0.8, 0.8, 1)
+layout_mode = 2
+text = "Leave Game"
+
+[node name="start_button" type="Button" parent="HBoxContainer/LeftVBoxContainer"]
+modulate = Color(1, 1, 0.8, 1)
+layout_mode = 2
+text = "Start Game"
+
+[node name="status_label" type="Label" parent="HBoxContainer/LeftVBoxContainer"]
+layout_mode = 2
+
+[node name="RightVBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightPanel" type="ColorRect" parent="HBoxContainer/RightVBoxContainer"]
+layout_mode = 2
+color = Color(0.4, 0.3, 0.5, 0.8)
+
+[node name="players_in_lobby" type="Label" parent="HBoxContainer/RightVBoxContainer"]
+modulate = Color(1, 1, 0.8, 1)
+layout_mode = 2
+text = "Players in Lobby"
+horizontal_alignment = 1
+
+[node name="player_list" type="ItemList" parent="HBoxContainer/RightVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="chat" type="Label" parent="HBoxContainer/RightVBoxContainer"]
+modulate = Color(1, 1, 0.8, 1)
+layout_mode = 2
+text = "Chat"
+horizontal_alignment = 1
+
+[node name="chat_log" type="TextEdit" parent="HBoxContainer/RightVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+editable = false
+
+[node name="usernameHBox" type="HBoxContainer" parent="HBoxContainer/RightVBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="chat_input" type="LineEdit" parent="HBoxContainer/RightVBoxContainer/usernameHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_to_text_length = true
+
+[node name="send_button" type="Button" parent="HBoxContainer/RightVBoxContainer/usernameHBox"]
+modulate = Color(0.8, 1, 0.8, 1)
+layout_mode = 2
+text = "Send"

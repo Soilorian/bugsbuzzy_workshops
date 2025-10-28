@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqt5k7b1m6384"]
+
+[ext_resource type="Material" uid="uid://c08i3ltjvpsvw" path="res://materials/floor_material.tres" id="1_g5sng"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_57x2y"]
+size = Vector3(1, 0.4, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_57x2y"]
+points = PackedVector3Array(-0.5, -0.2, -0.5, -0.5, 0.2, -0.5, 0.5, -0.2, -0.5, -0.5, -0.2, 0.5, -0.5, 0.2, 0.5, 0.5, 0.2, -0.5, 0.5, -0.2, 0.5, 0.5, 0.2, 0.5)
+
+[node name="Floor" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_57x2y")
+surface_material_override/0 = ExtResource("1_g5sng")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_57x2y")
